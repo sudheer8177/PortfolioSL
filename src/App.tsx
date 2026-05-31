@@ -9,14 +9,12 @@ export default function App() {
 
   return (
     <>
-      {/* 3D Canvas — always rendered, revealed after START */}
+      {/* 3D Canvas — always rendered (opacity trick causes WebGL stall) */}
       <Canvas
         camera={{ position: [0, 1.7, 26], fov: 52, near: 0.1, far: 80 }}
         style={{
           position: 'fixed', inset: 0,
           background: '#e8e7e4',
-          opacity: started ? 1 : 0,
-          transition: 'opacity 0.8s ease',
         }}
         gl={{ antialias: true, powerPreference: 'high-performance' }}
         onCreated={({ gl }) => gl.setPixelRatio(Math.min(window.devicePixelRatio, 2))}

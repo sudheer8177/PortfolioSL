@@ -1,6 +1,6 @@
 import { useRef, useMemo } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useScroll, ScrollControls, Html, Line, Text } from '@react-three/drei'
+import { useScroll, ScrollControls, Html, Line, Text3D, Center } from '@react-three/drei'
 import { EffectComposer, Vignette } from '@react-three/postprocessing'
 import * as THREE from 'three'
 import { personal, projects, experience, skills } from '../data/portfolio'
@@ -318,21 +318,22 @@ function Intro() {
   useVis(g, [], 0, 0.01, 0.08, 0.16)
 
   return (
-    <group ref={g} position={[0, 2.5, 14]}>
-      <Text
-        font="https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CxBi6tYggc.woff2"
-        fontSize={0.7} color="#1a1a1a" anchorX="center" anchorY="middle"
-        letterSpacing={0.04} position={[0, 0.5, 0]}
-      >
-        SUDHEER KUMAR
-      </Text>
-      <Text
-        font="https://fonts.gstatic.com/s/spacemono/v13/i7dPIFZifjKcF5UAWdDRUEZ2RFq7AwU.woff2"
-        fontSize={0.18} color="rgba(26,26,26,0.5)" anchorX="center" anchorY="middle"
-        letterSpacing={0.08} position={[0, -0.2, 0]}
-      >
-        FULLSTACK DEVELOPER · ML ENGINEER
-      </Text>
+    <group ref={g} position={[0, 2.2, 14]}>
+      <Center position={[0, 0.5, 0]}>
+        <Text3D font="/fonts/helvetiker_bold.typeface.json"
+          size={0.6} height={0.08} curveSegments={8}
+          bevelEnabled bevelThickness={0.006} bevelSize={0.005} bevelSegments={3}>
+          SUDHEER KUMAR
+          <meshStandardMaterial color="#2a2a2a" roughness={0.6} metalness={0.1} />
+        </Text3D>
+      </Center>
+      <Center position={[0, -0.3, 0]}>
+        <Text3D font="/fonts/helvetiker_bold.typeface.json"
+          size={0.14} height={0.02} curveSegments={5}>
+          FULLSTACK DEVELOPER  ·  ML ENGINEER
+          <meshStandardMaterial color="#888" roughness={0.8} />
+        </Text3D>
+      </Center>
     </group>
   )
 }
