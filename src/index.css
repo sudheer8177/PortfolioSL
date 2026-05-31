@@ -1,0 +1,28 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0c0906;
+  --gold: #c8956c;
+  --cream: #e8ddd0;
+  --copper: #9b6e4a;
+  --text: #f2e8de;
+  --muted: rgba(242,232,222,0.45);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  overflow: hidden; /* ScrollControls manages scroll internally */
+  height: 100%;
+  cursor: crosshair;
+}
+
+#root { width: 100vw; height: 100vh; }
+
+.ui-panel {
+  font-family: 'Cormorant Garamond', serif;
+  pointer-events: auto;
+}
+
+::-webkit-scrollbar { display: none; }

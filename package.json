@@ -1,0 +1,29 @@
+{
+  "name": "portfolio-sl",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5175",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.167.1",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/drei": "^9.109.2",
+    "@react-three/postprocessing": "^2.16.2",
+    "framer-motion": "^11.3.24",
+    "lenis": "^1.1.13"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.167.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  }
+}
